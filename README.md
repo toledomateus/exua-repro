@@ -218,7 +218,7 @@ python scripts/sasrec_de.py \
 | `--save_dir` | `saved/ensemble/...` | Directory to save post-hoc ensemble checkpoints |
 
 
-> All the scripts has their version using total Uncertainty (per default), Aleatoric Uncertainty```_ua.py```and Epistemic Uncertainty ```_ue.py```. Also their ablation versions ```_a1.py``` and ```_alpha0.py```.
+> All scripts has their version using total Uncertainty (per default), Aleatoric Uncertainty```_ua.py```and Epistemic Uncertainty ```_ue.py```. Also their ablation versions ```_a1.py``` and ```_alpha0.py```.
 
 
 ### Step 3 — Compute Beyond-Accuracy Metrics
