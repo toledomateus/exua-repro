@@ -21,7 +21,7 @@ Three datasets are used across two preprocessing variants each — a 5-core filt
 
 ## Results
 
-ALl the findings and statistical results are salved into results folder.
+All the findings and statistical results are salved into results folder.
 
 ## Requirements
 
