@@ -130,13 +130,13 @@ Each UQ script supports two modes via `--mode`:
 
 ```bash
 # Uncertainty analysis only
-python sasrec_mcd.py \
+python scripts/sasrec_mcd.py \
   --checkpoint saved/SASRec-Feb-18-2026_10-53-03.pth \
   --dataset ml-1m \
   --mode uncertainty
 
 # Post-hoc training
-python sasrec_mcd.py \
+python scripts/sasrec_mcd.py \
   --checkpoint saved/SASRec-Feb-18-2026_10-53-03.pth \
   --dataset ml-1m \
   --mode posthoc \
@@ -157,14 +157,14 @@ python sasrec_mcd.py \
 
 ```bash
 # Belief Matching, uncertainty only
-python sasrec_dirichlet.py \
+python scripts/sasrec_dirichlet.py \
   --checkpoint saved/SASRec-Feb-18-2026_10-53-03.pth \
   --method bm \
   --dataset ml-1m \
   --mode uncertainty
 
 # Evidential Deep Learning, post-hoc training
-python sasrec_dirichlet.py \
+python scripts/sasrec_dirichlet.py \
   --checkpoint saved/SASRec-Feb-18-2026_10-53-03.pth \
   --method edl \
   --dataset ml-1m \
@@ -190,7 +190,7 @@ The ensemble script expects **N separate SASRec checkpoints**, one per ensemble 
 
 ```bash
 # Uncertainty analysis
-python sasrec_de.py \
+python scripts/sasrec_de.py \
   --checkpoints saved/SASRec-Mar-11-2026_13-03-57.pth \
                 saved/SASRec-Mar-11-2026_13-09-16.pth \
                 saved/SASRec-Mar-11-2026_13-09-48.pth \
@@ -198,7 +198,7 @@ python sasrec_de.py \
   --mode uncertainty
 
 # Post-hoc training
-python sasrec_de.py \
+python scripts/sasrec_de.py \
   --checkpoints saved/SASRec-Mar-11-2026_13-03-57.pth \
                 saved/SASRec-Mar-11-2026_13-09-16.pth \
                 saved/SASRec-Mar-11-2026_13-09-48.pth \
@@ -216,6 +216,10 @@ python sasrec_de.py \
 | `--dataset` | `ml-1m` | Dataset name |
 | `--mode` | `uncertainty` | `uncertainty` or `posthoc` |
 | `--save_dir` | `saved/ensemble/...` | Directory to save post-hoc ensemble checkpoints |
+
+
+> All the scripts has their version using total Uncertainty (per default), Aleatoric Uncertainty```_ua.py```and Epistemic Uncertainty ```_ue.py```. Also their ablation versions ```_a1.py``` and ```_alpha0.py```.
+
 
 ### Step 3 — Compute Beyond-Accuracy Metrics
 
